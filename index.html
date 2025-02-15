@@ -1,69 +1,75 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Для Даши 💖</title>
-    <style>
-        body {
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
-            text-align: center;
-            font-family: Arial, sans-serif;
-            color: white;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            overflow: hidden;
-            position: relative;
-        }
-        h1 {
-            font-size: 2.5em;
-        }
-        .heart {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background-color: red;
-            clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 80%, 20% 100%, 0% 35%);
-            animation: float 5s infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(0); opacity: 1; }
-            100% { transform: translateY(-100vh); opacity: 0; }
-        }
-        button {
-            background-color: white;
-            border: none;
-            padding: 15px 25px;
-            font-size: 1.2em;
-            border-radius: 10px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: pink;
-        }
-    </style>
-</head>
-<body>
-    <h1>Даша, ты моё солнышко! 💖</h1>
-    <p>Ты самая прекрасная, и я хочу, чтобы ты всегда улыбалась!</p>
-    <button onclick="showMessage()">Нажми меня 💕</button>
-    <script>
-        function showMessage() {
-            alert('Я люблю тебя, Даша! 💘');
-        }
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 5000);
-        }
-        setInterval(createHeart, 300);
-    </script>
-</body>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Для Даші 💖</title>
+        <style>
+            body {
+                background: linear-gradient(to right, #ff758c, #ff7eb3);
+                text-align: center;
+                font-family: Arial, sans-serif;
+                color: white;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                overflow: hidden;
+                position: relative;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+            .heart {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background-color: red;
+                clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 80%, 20% 100%, 0% 35%);
+                animation: float 5s infinite;
+            }
+            @keyframes float {
+                0% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-100vh);
+                    opacity: 0;
+                }
+            }
+            button {
+                background-color: white;
+                border: none;
+                padding: 15px 25px;
+                font-size: 1.2em;
+                border-radius: 10px;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+            button:hover {
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Даша, ти моє сонечко! 💖</h1>
+        <p>Ти найпрекрасніша, і я хочу, щоб ти завжди усміхалася!</p>
+        <button onclick="showMessage()">Натисни мене 💕</button>
+        <script>
+            function showMessage() {
+                alert('Я тебе люблю, Даша! 💘');
+            }
+            function createHeart() {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 5000);
+            }
+            setInterval(createHeart, 300);
+        </script>
+    </body>
 </html>
